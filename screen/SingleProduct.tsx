@@ -1,18 +1,14 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { View} from 'react-native';
+import {Card} from '../compunets';
+import rncStyles from 'rncstyles';
 
-const SingleProduct = () => {
-  const style = StyleSheet.create({
-    card: {
-      padding: 5,
-      borderRadius: 5,
-      height: 51,
-      width: 10,
-    },
-  });
+const SingleProduct = ({route}: any) => {
+  console.log(route.params);
+  let x = route.params;
   return (
-    <View>
-      <Text >SingleProduct</Text>
+    <View style={[rncStyles.h100 ,{justifyContent : "center" ,alignItems:"center"}]}>
+      <Card {...x} />
     </View>
   );
 };
